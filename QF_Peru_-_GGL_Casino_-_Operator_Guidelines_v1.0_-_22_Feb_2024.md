@@ -1,6 +1,6 @@
 ---
 country: Peru
-document_name: Peru Operator Guidelines - Regulated Market Casino Compliance
+document_name: Peru Operator Guidelines Regulated Market Casino Compliance
 source_file: QF Peru - GGL Casino - Operator Guidelines v1.0 - 22 Feb 2024.pdf
 extracted_date: 2026-04-30
 jurisdiction: Peru
@@ -8,8 +8,8 @@ jurisdiction: Peru
 
 # Peru Operator Guidelines
 
-Regulated Market Casino  
-Compliance
+**Regulated Market Casino**  
+**Compliance**
 
 Release Date: 22nd February 2024  
 Document No: 000 - 000  
@@ -72,9 +72,8 @@ The following table summarises the areas and where the responsibilities lie. The
 | Gaming | RNG Certification | Yes | Yes |
 | Gaming | Game Rules | Yes | Yes |
 | Gaming | Display Game Rules | Yes | Yes |
-| Component | Sub-Component | Operator | GGL |
-| Display Game Help |  | Yes | Yes |
-| Display RTP |  | Yes | Yes |
+| Gaming | Display Game Help | Yes | Yes |
+| Gaming | Display RTP | Yes | Yes |
 | Back Office | Account Migration | Yes | No |
 | Back Office | Game Management | Yes | Yes |
 | Back Office | Account Management | Yes | No |
@@ -145,16 +144,16 @@ We will manage a daily (24-hour) integrity verification of critical game files p
 
 The following game changes will be implemented by Games Global Limited and included in Peru casinos:
 
-- **Autoplay**
+- Autoplay
   - AutoPlay will be available for players.
   - The player will be able to stop AutoPlay at any given moment, if enabled.
   - A maximum of 100 automatic spins will be implemented.
-- **Players Balance**
+- Players Balance
   - The screen must show the player’s current balance, in Peruvian currency, as well as the individual bets placed.
-- **Help Files and Game Rules**
+- Help Files and Game Rules
   - We shall display the RTP in all help files.
   - Game rules, including paytables, shall always be available to players.
-- **Playcheck**
+- Playcheck
   - Playcheck must provide data on gaming transactions for a minimum duration of 30 days.
 
 ### Incomplete Games
@@ -173,8 +172,8 @@ GET /balances/product/productId/user/userId/incompleteGames
 
 | Name | Type | Format |
 |---|---|---|
-| productId | The ProductId (previously called CasinoId or ServerId). This identifies the system where the account is held and can be either a SessionProductId or RegisteredProductId | Integer int32 |
-| userId | The UserId of the account. | Integer int32 |
+| productId The ProductId (previously called CasinoId or ServerId). This identifies the system where the account is held and can be either a SessionProductId or RegisteredProductId | Integer | int32 |
+| userId The UserId of the account. | Integer | int32 |
 
 After a request call is initiated, a response will be sent back that will either be a successful or an unsuccessful (error) attempt. If successful, the below information is displayed:
 
@@ -182,14 +181,14 @@ After a request call is initiated, a response will be sent back that will either
 
 | Name | Type | Format |
 |---|---|---|
-| clientId | The ClientId for the game. | Integer int32 |
-| moduleId | The ModuleId for the game. | Integer int32 |
-| gameName | The name of the game, e.g. HTML5 - Feature Slot - Avalon. | String int32 |
-| moduleName | The name of the module, e.g. Feature Slot - Avalon. | String int32 |
-| payouts | The combined amount owed to the user, e.g. a payout from a win in a game. | Number Decimal |
-| sessionId | SessionId allocated for the session. | Integer int32 |
-| userTransNumber | The UserTransNumber is the associated user transaction number for the incomplete game. | Integer int32 |
-| wagers | The combined amount taken from the user, e.g. a bet taken during a game. | Number Decimal |
+| clientId The ClientId for the game. | Integer | int32 |
+| moduleId The ModuleId for the game. | Integer | int32 |
+| gameName The name of the game, e.g. HTML5 - Feature Slot - Avalon. | String | int32 |
+| moduleName The name of the module, e.g. Feature Slot - Avalon. | String | int32 |
+| payouts The combined amount owed to the user, e.g. a payout from a win in a game. | Number | Decimal |
+| sessionId SessionId allocated for the session. | Integer | int32 |
+| userTransNumber The UserTransNumber is the associated user transaction number for the incomplete game. | Integer | int32 |
+| wagers The combined amount taken from the user, e.g. a bet taken during a game. | Number | Decimal |
 
 The /accounts/CheckUserExists API method returns the UserId of the player. You can use this method to retrieve the UserId to do the Incomplete games call.
 
@@ -197,10 +196,10 @@ The /accounts/CheckUserExists API method returns the UserId of the player. You c
 
 | Name | Type | Format |
 |---|---|---|
-| doesExist | Indicates whether the specified Username exists or not. | Boolean int32 |
-| registeredProductId | The ProductId (previously called CasinoId or ServerId) against which the account was created. Only returned if the specified Username already exists. | Integer int32 |
-| suggestedUsernames | Array of suggested alternate Usernames that are currently available. They are based on the provided username. Only returned if the specified Username already exists. | String |
-| userId | The UserID for the account if the Username already exists. | Integer int32 |
+| doesExist Indicates whether the specified Username exists or not. | Boolean | int32 |
+| registeredProductId The ProductId (previously called CasinoId or ServerId) against which the account was created. Only returned if the specified Username already exists. | Integer | int32 |
+| suggestedUsernames Array of suggested alternate Usernames that are currently available. They are based on the provided username. Only returned if the specified Username already exists. | String |  |
+| userId The UserID for the account if the Username already exists. | Integer | int32 |
 
 ### Incomplete Games Sweeper
 
@@ -224,17 +223,17 @@ You are required to advise your players regarding this on your Terms and Conditi
 
 Responsible gaming measures need to be in place to ensure that all players play responsibly and are in control of managing their gaming activity. Since our operators own the player accounts and manage their own lobby, you must ensure that the following responsible gaming options are accessible to your players:
 
-- **Deposit Limits**
+- Deposit Limits
   - The player must have an option to set Deposit Limits. In cases where the player tries to increase (make less strict) these limits, a 24-hour cooldown must apply before the new values are implemented.
   - In the event of reaching the deposit limit, the user shall not be able to deposit further funds.
-- **Bet Limits**
+- Bet Limits
   - The player must have an option to set Bet limits. In cases where the player tries to increase (make less strict) these limits, a 24-hour cooldown must apply before the new values are implemented.
   - In the event of reaching the bet limit, the user shall not be able to start another game process.
-- **Self-Exclusions**
+- Self-Exclusions
   - An internal exclusion system must exist that allows the player to self-exclude either temporarily or permanently.
   - Players who self-exclude cannot login, participate in games or deposit.
 
-- **Error Codes**
+- Error Codes
   - To enable the Games Global Limited system to display informative error messages to players, we require that the following error codes are returned under the prescribed conditions.
 
 | Code | Description |
